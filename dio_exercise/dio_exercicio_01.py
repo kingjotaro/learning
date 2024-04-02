@@ -12,7 +12,7 @@ def input_value(message):
 def deposit(balance, history):
     valor = input_value("Informe o valor do depósito: ")
     balance += valor
-    history += f"Crédito:".ljust(20 - len(f"R$ {valor:.2f}")) + f"R$ {valor:.2f}\n"
+    history += f"Crédito:".ljust(19 - len(f"R$ {valor:.2f}")) + f"R$ {valor:.2f}\n"
     print(f"Depositado R${valor:.2f}\nSaldo total R${balance:.2f}\n")
     return balance, history
 
@@ -26,7 +26,7 @@ def withdraw(balance, limit, history, num_withdrawals, MAX_WITHDRAWALS):
         print("Operação falhou! O valor do saque excede o limite.")
     else:
         balance -= valor
-        history += f"Débito:".ljust(20 - len(f"R$ {valor:.2f}")) + f"R$ {valor:.2f}\n"
+        history += f"Débito:".ljust(19 - len(f"R$ {valor:.2f}")) + f"R$ {valor:.2f}\n"
         num_withdrawals += 1
         print(f"Saque de R${valor:.2f} realizado com sucesso!\nSaldo restando R${balance:.2f}\n")
     return balance, history, num_withdrawals
